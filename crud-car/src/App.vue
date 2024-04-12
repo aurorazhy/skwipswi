@@ -1,7 +1,7 @@
-<script
+<!-- <script
 	src="https://kit.fontawesome.com/d689969a25.js"
 	crossorigin="anonymous"
-></script>
+></script> -->
 
 <template>
 	<div id="app">

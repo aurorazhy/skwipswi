@@ -5,17 +5,17 @@ const routes = [
 		path: "/",
 		alias: "/tutorials",
 		name: "tutorials",
-		component: () => import("../components/TutorialsList"),
+		component: () => import("../components/TutorialsList.vue"),
 	},
 	{
 		path: "/tutorials/:id",
 		name: "tutorial-details",
-		component: () => import("../components/Tutorial"),
+		component: () => import("../components/Tutorial.vue"),
 	},
 	{
 		path: "/add",
 		name: "add",
-		component: () => import("../components/AddTutorial"),
+		component: () => import("../components/AddTutorial.vue"),
 	},
 ];
 
