@@ -12,19 +12,6 @@
                     >Tambah</base-button
                   >
                 </div>
-                <div class="col-md-3">
-                  <base-button
-                    class = "p-4" 
-                    type="primary"
-                    block
-                    @click="notifyVue('bottom', 'center')"
-                    >Drafts</base-button
-                  >
-                </div>
-                <div class="col-md-3">
-                  <h4>Total Katalog</h4>
-                  <p>21</p>
-                </div>
               </div>
             </div>
           </div>
