@@ -4,4 +4,4 @@ figma : https://www.figma.com/file/llFQxABwS30jyR36g2HOj3/Untitled?type=design&n
 
 erd : https://drive.google.com/file/d/1CJEDJwHC4O-ericsjnEXDmrSNWxPESLa/view?usp=sharing
 
-fe repo : https://github.com/aurorazhy/skwipswi
+be repo : https://github.com/aurorazhy/be-skwipsi
