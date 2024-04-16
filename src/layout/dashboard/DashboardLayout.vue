@@ -8,15 +8,16 @@
           icon="tim-icons icon-chart-pie-36"
         />
         <sidebar-link
-          to="/katalog"
-          :name="$t('katalog')"
-          icon="tim-icons icon-bag-16"
-        />
-        <sidebar-link
           to="/history"
           :name="$t('history')"
           icon="tim-icons icon-cart"
         />
+        <sidebar-link
+          to="/katalog"
+          :name="$t('katalog')"
+          icon="tim-icons icon-bag-16"
+        />
+        
         <sidebar-link
           to="/opsibayar"
           :name="$t('opsibayar')"
