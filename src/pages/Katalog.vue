@@ -41,10 +41,13 @@
             <table class="table table-bordered table-striped table-hover">
       <thead>
         <tr>
-          <th>ID</th>
-          <th>Name</th>
-          <th>Email</th>
-          <th>Actions</th>
+          <th>No</th>
+          <th>Nama</th>
+          <th>Brand</th>
+          <th>Tahun</th>
+          <th>Kilometer</th>
+          <th>Warna</th>
+          <th>CC Mesin</th>
         </tr>
       </thead>
       <tbody>
@@ -52,6 +55,10 @@
           <td>{{ idk.id }}</td>
           <td>{{ idk.name }}</td>
           <td>{{ idk.email }}</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
           <td>
             <button class="btn btn-primary" @click="editidk(idk)">Edit</button>
             <button class="btn btn-danger" @click="deleteidk(idk.id)">Delete</button>
@@ -79,6 +86,7 @@ export default {
         { id: 1, name: 'John Doe', email: 'john.doe@example.com' },
         { id: 2, name: 'Jane Doe', email: 'jane.doe@example.com' },
         { id: 3, name: 'Bob Smith', email: 'bob.smith@example.com' },
+        { id: 3, name: 'Bob Smith', email: 'bob.smith@example.com' }
       ],
     };
   },
