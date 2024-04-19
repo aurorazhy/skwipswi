@@ -39,12 +39,12 @@
       <collapse-transition>
         <div class="collapse navbar-collapse show" v-show="showMenu">
           <ul class="navbar-nav" :class="$rtl.isRTL ? 'mr-auto' : 'ml-auto'">
-            <div
+            <!-- <div
               class="search-bar input-group"
               @click="searchModalVisible = true"
             >
-              <!-- <input type="text" class="form-control" placeholder="Search...">
-              <div class="input-group-addon"><i class="tim-icons icon-zoom-split"></i></div> -->
+              <input type="text" class="form-control" placeholder="Search...">
+              <div class="input-group-addon"><i class="tim-icons icon-zoom-split"></i></div> 
               <button
                 class="btn btn-link"
                 id="search-button"
@@ -53,7 +53,7 @@
               >
                 <i class="tim-icons icon-zoom-split"></i>
               </button>
-              <!-- You can choose types of search input -->
+              You can choose types of search input 
             </div>
             <modal
               :show.sync="searchModalVisible"
@@ -70,7 +70,7 @@
                 id="inlineFormInputGroup"
                 placeholder="SEARCH"
               />
-            </modal>
+            </modal> -->
             <base-dropdown
               tag="li"
               :menu-on-right="!$rtl.isRTL"
@@ -85,9 +85,10 @@
                 aria-expanded="true"
               >
                 <div class="notification d-none d-lg-block d-xl-block"></div>
-                <i class="tim-icons icon-sound-wave"></i>
+                <i class="tim-icons icon-bell-55"></i>
                 <p class="d-lg-none">New Notifications</p>
               </a>
+              <!-- notifications examples -->
               <li class="nav-link">
                 <a href="#" class="nav-item dropdown-item"
                   >Mike John responded to your email</a
@@ -126,9 +127,19 @@
                 data-toggle="dropdown"
                 aria-expanded="true"
               >
+              <div>
+              <div class="">
+              <p class="pr-2">Hi, nama lu</p>
                 <div class="photo">
                   <img src="img/anime3.png" />
-                </div>
+                  <!-- will call from db REMEMBER OK PLZ -->
+                </div></div>
+              </div>
+<!-- <p>hi mamamia lezatos</p>
+                <div class="photo">
+                  <img src="img/anime3.png" /> -->
+                  <!-- will call from db REMEMBER OK PLZ -->
+                <!-- </div> -->
                 <b class="caret d-none d-lg-block d-xl-block"></b>
                 <p class="d-lg-none">Log out</p>
               </a>
@@ -156,7 +167,7 @@ import Modal from "@/components/Modal";
 export default {
   components: {
     CollapseTransition,
-    Modal,
+    // Modal,
   },
   computed: {
     routeName() {
