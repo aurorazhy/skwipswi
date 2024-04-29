@@ -165,7 +165,7 @@ import LineChart from "@/components/Charts/LineChart";
 import BarChart from "@/components/Charts/BarChart";
 import * as chartConfigs from "@/components/Charts/config";
 import TaskList from "./Dashboard/TaskList";
-import UserTable from "./Dashboard/UserTable";
+import UserTable from "../Dashboard/UserTable";
 import config from "@/config";
 
 export default {
@@ -350,4 +350,4 @@ export default {
   },
 };
 </script>
-<style></style>
+<style></style>./Home.vue

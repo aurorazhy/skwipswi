@@ -7,7 +7,7 @@ import NotFound from "@/pages/NotFoundPage.vue";
 const Dashboard = () =>
   import(/* webpackChunkName: "dashboard" */ "@/pages/Dashboard.vue");
 const Profile = () =>
-  import(/* webpackChunkName: "common" */ "@/pages/Profile.vue");
+  import(/* webpackChunkName: "common" */ "@/pages/Admin/Profile.vue");
 const Notifications = () =>
   import(/* webpackChunkName: "common" */ "@/pages/Notifications.vue");
 const Icons = () =>
@@ -18,20 +18,23 @@ const Typography = () =>
 const TableList = () =>
   import(/* webpackChunkName: "common" */ "@/pages/TableList.vue");
 const Katalog = () =>
-    import(/* webpackChunkName: "common" */ "@/pages/Katalog.vue");
+    import(/* webpackChunkName: "common" */ "@/pages/Admin/Katalog.vue");
 const Drafts = () =>
-    import(/* webpackChunkName: "common" */ "@/pages/Drafts.vue");
-const History = () =>
-    import(/* webpackChunkName: "common" */ "@/pages/History.vue");
+    import(/* webpackChunkName: "common" */ "@/pages/Admin/Drafts.vue");
+const Janjitemu = () =>
+    import(/* webpackChunkName: "common" */ "@/pages/Admin/Janjitemu.vue");
     const OpsiBayar = () =>
-        import(/* webpackChunkName: "common" */ "@/pages/OpsiBayar.vue");
+        import(/* webpackChunkName: "common" */ "@/pages/Admin/OpsiBayar.vue");
+const Mobil = () => 
+    import('@/pages/Admin/Mobil.vue');
 
 const routes = [
   {
-    path: "/",
+    path: "/admin",
     component: DashboardLayout,
-    redirect: "/dashboard",
+    redirect: "/admin/dashboard",
     children: [
+      
       {
         path: "dashboard",
         name: "dashboard",
@@ -78,14 +81,19 @@ const routes = [
         component: Drafts,
       },
       {
-        path: "history",
-        name: "history",
-        component: History,
+        path: "janjitemu",
+        name: "janjitemu",
+        component: Janjitemu,
       },
       {
         path: "opsibayar",
         name: "opsibayar",
         component: OpsiBayar,
+      },
+      {
+        path: "mobil",
+        name: "mobil",
+        component: Mobil,
       }
     ],
   },

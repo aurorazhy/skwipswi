@@ -76,48 +76,6 @@
               :menu-on-right="!$rtl.isRTL"
               title-tag="a"
               class="nav-item"
-            >
-              <a
-                slot="title"
-                href="#"
-                class="dropdown-toggle nav-link"
-                data-toggle="dropdown"
-                aria-expanded="true"
-              >
-                <div class="notification d-none d-lg-block d-xl-block"></div>
-                <i class="tim-icons icon-bell-55"></i>
-                <p class="d-lg-none">New Notifications</p>
-              </a>
-              <!-- notifications examples -->
-              <li class="nav-link">
-                <a href="#" class="nav-item dropdown-item"
-                  >Mike John responded to your email</a
-                >
-              </li>
-              <li class="nav-link">
-                <a href="#" class="nav-item dropdown-item"
-                  >You have 5 more tasks</a
-                >
-              </li>
-              <li class="nav-link">
-                <a href="#" class="nav-item dropdown-item"
-                  >Your friend Michael is in town</a
-                >
-              </li>
-              <li class="nav-link">
-                <a href="#" class="nav-item dropdown-item"
-                  >Another notification</a
-                >
-              </li>
-              <li class="nav-link">
-                <a href="#" class="nav-item dropdown-item">Another one</a>
-              </li>
-            </base-dropdown>
-            <base-dropdown
-              tag="li"
-              :menu-on-right="!$rtl.isRTL"
-              title-tag="a"
-              class="nav-item"
               menu-classes="dropdown-navbar"
             >
               <a
@@ -127,25 +85,20 @@
                 data-toggle="dropdown"
                 aria-expanded="true"
               >
-              <div>
-              <div class="">
-              <p class="pr-2">Hi, nama lu</p>
+              <!-- <p class="m-2">Hi, nama lu</p> -->
+            
                 <div class="photo">
                   <img src="img/anime3.png" />
                   <!-- will call from db REMEMBER OK PLZ -->
-                </div></div>
-              </div>
-<!-- <p>hi mamamia lezatos</p>
-                <div class="photo">
-                  <img src="img/anime3.png" /> -->
-                  <!-- will call from db REMEMBER OK PLZ -->
-                <!-- </div> -->
+                </div>
                 <b class="caret d-none d-lg-block d-xl-block"></b>
                 <p class="d-lg-none">Log out</p>
               </a>
-              <li class="nav-link">
-                <a href="#" class="nav-item dropdown-item">Profile</a>
-              </li>
+              <router-link :to="{ path: '/admin/profile' }">
+                <li class="nav-link">
+                  <a href="#" class="nav-item dropdown-item">Profile</a>
+                </li>
+              </router-link>
               <li class="nav-link">
                 <a href="#" class="nav-item dropdown-item">Settings</a>
               </li>

@@ -1,60 +1,65 @@
 <template>
   <div class="wrapper">
-    <side-bar>
+   <side-bar>
       <template slot="links">
         <sidebar-link
-          to="/dashboard"
+          to="/admin/dashboard"
           :name="$t('sidebar.dashboard')"
-          icon="tim-icons icon-chart-pie-36"
+          icon="tim-icons icon-components"
         />
         <sidebar-link
-          to="/history"
-          :name="$t('history')"
+          to="/admin/janjitemu"
+          :name="$t('Janji Temu')"
           icon="tim-icons icon-cart"
         />
         <sidebar-link
-          to="/katalog"
+          to="/admin/mobil"
+          :name="$t('mobil')"
+          icon="tim-icons icon-bus-front-12"
+        />
+        <sidebar-link
+          to="/admin/katalog"
           :name="$t('katalog')"
           icon="tim-icons icon-bag-16"
         />
         
         <sidebar-link
-          to="/opsibayar"
-          :name="$t('opsibayar')"
+          to="/admin/opsibayar"
+          :name="$t('opsi bayar')"
           icon="tim-icons icon-coins"
         />
         <sidebar-link
-          to="/icons"
+          to="/admin/icons"
           :name="$t('sidebar.icons')"
           icon="tim-icons icon-atom"
         />
         <sidebar-link
-          to="/maps"
+          to="/admin/maps"
           :name="$t('sidebar.maps')"
           icon="tim-icons icon-pin"
         />
         <sidebar-link
-          to="/notifications"
+          to="/admin/notifications"
           :name="$t('sidebar.notifications')"
           icon="tim-icons icon-bell-55"
         />
         <sidebar-link
-          to="/profile"
+          to="/admin/profile"
           :name="$t('sidebar.userProfile')"
           icon="tim-icons icon-single-02"
         />
         <sidebar-link
-          to="/table-list"
+          to="/admin/table-list"
           :name="$t('sidebar.tableList')"
           icon="tim-icons icon-puzzle-10"
         />
         <sidebar-link
-          to="/typography"
+          to="/admin/typography"
           :name="$t('sidebar.typography')"
           icon="tim-icons icon-align-center"
         />
         <sidebar-link
-          to="/dashboard?enableRTL=true"
+          to="/admin/dashboard?enableRTL=true"
           :name="$t('sidebar.rtlSupport')"
           icon="tim-icons icon-world"
         />
