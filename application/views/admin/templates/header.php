@@ -112,7 +112,7 @@
 					<li class="nav-item">
 						<a class="nav-link" href="<?= base_url('admin/sale_histories') ?>">
 							<i class="mdi mdi-history menu-icon"></i>
-							<span class="menu-title">History</span>
+							<span class="menu-title">Riwayat Pembelian</span>
 						</a>
 					</li>
 					<li class="nav-item">
