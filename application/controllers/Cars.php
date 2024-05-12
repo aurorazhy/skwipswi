@@ -41,7 +41,7 @@ class Cars extends CI_Controller
 			'user_id' => $this->session->userdata('user')->id,
 		];
 		$this->db->insert('appointments', $data);
-		$this->session->set_flashdata('success', 'Berhasil membuat janji temu');
+		$this->session->set_flashdata('success', 'Berhasil membuat janji temu, silahkan tunggu konfirmasi dari kami!');
 		redirect('cars/detail/' . $this->input->post('car_id'));
 	}
 
