@@ -25,43 +25,78 @@
 						<p class="card-title fw-bold text-danger">
 							Rp. <?= number_format($car->price, 0, ',', '.') ?>
 						</p>
-						<h5 class="card-text"><?= $car->brand_name . ' ' . $car->model_name ?></h5>
+						<h4><b><?= $car->brand_name . ' ' . $car->model_name ?></b></h4>
 						<table class="table table-borderless">
 							<tbody>
 								<tr>
 									<td style="width: 5%;">
-										<i class="fas fa-tachometer-alt"></i>
+										<i class="fa-lg fas fa-tachometer-alt"></i>
 									</td>
+									<td><b>Kilometer</b></td>
+									
+									<td style="width: 5%;">
+										<i class="fa-lg fas fa-calendar"></i>
+									</td>
+									<td>
+										<b>Tahun Produksi</b>
+									</td>
+								</tr>
+								<tr>
+									<td></td>
 									<td>
 										<?= number_format($car->kilometers, 0, ',', ',') ?> km
 									</td>
-									<td style="width: 5%;">
-										<i class="fas fa-calendar"></i>
-									</td>
+									<td></td>
 									<td>
 										<?= $car->year ?>
 									</td>
 								</tr>
 								<tr>
 									<td>
-										<i class="fas fa-gas-pump"></i>
+										<i class="fa-lg fas fa-gas-pump"></i>
 									</td>
+									<td>
+										<b>Bahan Bakar</b>
+									</td>
+									<td>
+										<i class="fa-lg fas fa-cogs"></i>
+									</td>
+									<td>
+										<b>Transmisi</b>
+									</td>
+								</tr>
+								<tr>
+									<td></td>
 									<td>
 										<?= $car->fuel ?>
 									</td>
-									<td>
-										<i class="fas fa-cogs"></i>
-									</td>
+									<td></td>
 									<td>
 										<?= $car->transmission ?>
 									</td>
 								</tr>
 								<tr>
 									<td>
-										<i class="fas fa-palette"></i>
+										<i class="fa-lg fas fa-map-pin"></i>
 									</td>
 									<td>
+										<b>Area Registrasi</b>
+									</td>
+									<td>
+										<i class="fa-lg fas fa-tachometer-alt"></i>
+									</td>
+									<td>
+										<b>CC Mesin</b>
+									</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>
 										<?= $car->registration_area ?>
+									</td>
+									<td></td>
+									<td>
+										<?= $car->cc_engine ?>
 									</td>
 								</tr>
 							</tbody>

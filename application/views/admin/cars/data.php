@@ -12,6 +12,8 @@
 							<th style="width: 50px;">No</th>
 							<th>Gambar</th>
 							<th>Nama</th>
+							<th>Merk</th>
+							<th>Model</th>
 							<th>Plat</th>
 							<th>Transmisi</th>
 							<th>Fuel</th>
@@ -34,6 +36,8 @@
 								<td><?= $nomor++; ?></td>
 								<td><img src="<?= assets('img/cars/') . $x->img_link; ?>" alt="<?= $x->name; ?>" class="img-fluid rounded-0 my-2"></td>
 								<td><?= $x->name; ?></td>
+								<td><?= $x->brand_name; ?></td>
+								<td><?= $x->model_name; ?></td>
 								<td><?= $x->number_plate; ?></td>
 								<td><?= $x->transmission; ?></td>
 								<td><?= $x->fuel; ?></td>

@@ -123,7 +123,8 @@ class Dashboard extends CI_Controller
 
 	public function logout()
 	{
-		$this->session->sess_destroy();
+		$this->session->unset_userdata('admin');
+		$this->session->set_flashdata('success', 'Logout berhasil');
 		redirect('admin');
 	}
 }

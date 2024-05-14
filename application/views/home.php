@@ -27,10 +27,10 @@
 							<p class="card-title fw-bold text-danger">
 								Rp. <?= number_format($car->price, 0, ',', '.') ?>
 							</p>
-							<h5 class="card-text"><?= $car->brand_name . ' ' . $car->model_name ?></h5>
+							<h5><b><?= $car->brand_name . ' ' . $car->model_name ?></b></h5>
 							<p class="card-text">
 								<i class="fas fa-calendar"></i> <?= $car->year ?> |
-								<i class="fas fa-gas-pump"></i> <?= $car->fuel ?> |
+								<i class="fas fa-map-pin"></i> <?= $car->registration_area ?> |
 								<i class="fas fa-cogs"></i> <?= $car->transmission ?>
 							</p>
 							<a href="<?= base_url('cars/detail/' . $car->id) ?>" class="btn btn-primary">Detail</a>

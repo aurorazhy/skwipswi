@@ -27,12 +27,12 @@
 													<td width=20%>Password</td>
 													<td><input type="password" name="password" class="form-control" placeholder="Password"></td>
 												</tr>
-												<tr>
+												<!-- <tr>
 													<td width=20%>Foto</td>
 													<td>
 														<input type="file" name="img_link" class="form-control">
 													</td>
-												</tr>
+												</tr> -->
 											</table>
 											<div class="text-center mt-5">
 												<button class="btn btn-success" name="update">Simpan</button>
