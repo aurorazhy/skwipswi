@@ -30,7 +30,7 @@ class Payment_options extends CI_Controller
 				'type' => $this->input->post('type'),
 			];
 			$this->db->insert('payment_options', $data);
-			$this->session->set_flashdata('success', 'Data berhasil ditambahkan');
+			$this->session->set_flashdata('success', 'Data berhasil disimpan');
 			redirect('admin/payment_options');
 		}
 

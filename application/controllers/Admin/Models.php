@@ -34,7 +34,7 @@ class Models extends CI_Controller
 			];
 
 			$this->db->insert('models', $data);
-			$this->session->set_flashdata('success', 'Data berhasil ditambahkan');
+			$this->session->set_flashdata('success', 'Data berhasil disimpan');
 			redirect('admin/models');
 		}
 
