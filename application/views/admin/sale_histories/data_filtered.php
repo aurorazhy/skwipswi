@@ -4,16 +4,16 @@
 			<h6 class="m-0 font-weight-bold ">Data Riwayat Pembelian</h6>
 		</div>
 		<div class="card-body">
-			<div class="d-flex">
-				<form action="<?= base_url('admin/sale_histories/filtered')?>" method="post">
-						<label for="start_date">Start Date:</label>
-						<input type="date" name="start_date">
-						<label for="end_date">End Date:</label>
-						<input type="date" name="end_date">
-						<button type="submit" class="btn btn-primary ms-2">Filter</button>
-					</form>
-				<a href="<?= base_url('admin/sale_histories/pdf')?>" class="btn btn-primary ms-2">Print</a>
-			</div>
+		<div class="d-flex">
+			<form action="<?= base_url('admin/sale_histories/filtered')?>" method="POST">
+				<label for="start_date">Start Date:</label>
+				<input type="date" id="start_date" name="start_date" value="<?= set_value('start_date') ?>">
+				<label for="end_date">End Date:</label>
+				<input type="date" id="end_date" name="end_date" value="<?= set_value('end_date') ?>">
+				<button type="submit" class="btn btn-primary ms-2">Filter</button>
+			</form>
+		<a href="<?= base_url('admin/sale_histories/pdf_filtered/?start_date=' . set_value('start_date') . '&end_date=' . set_value('end_date'))?>" class="btn btn-primary ms-2">Print</a>
+		</div>
 			<div class="table-responsive">
 				<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
 					<thead>
