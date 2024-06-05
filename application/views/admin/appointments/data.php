@@ -4,6 +4,16 @@
 			<h6 class="m-0 font-weight-bold ">Janji Temu</h6>
 		</div>
 		<div class="card-body">
+		<div class="d-flex">
+				<form action="<?= base_url('admin/appointments/filtered')?>" method="post">
+						<label for="start_date">Start Date:</label>
+						<input type="date" name="start_date">
+						<label for="end_date">End Date:</label>
+						<input type="date" name="end_date">
+						<button type="submit" class="btn btn-primary ms-2">Filter</button>
+					</form>
+				<a href="<?= base_url('admin/appointments/pdf')?>" class="btn btn-primary ms-2">Print</a>
+			</div>
 			<div class="table-responsive">
 				<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
 					<thead>

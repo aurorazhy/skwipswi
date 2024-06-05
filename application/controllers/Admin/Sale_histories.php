@@ -46,8 +46,6 @@ class Sale_histories extends CI_Controller
 		redirect('admin/sale_histories');
 	}
 
-	
-
 	public function pdf()
 	{
 		$this->db->select('sale_histories.*, CONCAT(brands.name, " ", models.name, " | ", cars.name) as car_name, payment_options.name as payment_option_name, cars.price as car_price, cars.number_plate as car_number_plate, cars.color as car_color, cars.year as car_year, cars.kilometers as car_kilometers, cars.cc_engine as car_cc_engine, cars.transmission as car_transmission, cars.fuel as car_fuel, cars.tax_exp_date as car_tax_exp_date, cars.registration_area as car_registration_area, cars.description as car_description, cars.img_link as car_image, cars.is_sold as car_is_sold, brands.name as brand_name, models.name as model_name, users.name as user_name, users.email as user_email');
