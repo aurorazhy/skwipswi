@@ -74,12 +74,12 @@ $active_group = 'default';
 $query_builder = TRUE;
 
 $db['default'] = array(
-	'dsn'	   => 'mysql://root:GSgBzqxTwejWQjLFdlFGdQWycjqSLwOA@monorail.proxy.rlwy.net:34103/db_zaddeautomobil',
+	'dsn'	   => 'mysql://root:GSgBzqxTwejWQjLFdlFGdQWycjqSLwOA@monorail.proxy.rlwy.net:34103/railway',
 	'hostname' => 'monorail.proxy.rlwy.net',
 	'port'     => '34103',
 	'username' => 'root',
 	'password' => 'GSgBzqxTwejWQjLFdlFGdQWycjqSLwOA',
-	'database' => 'db_zaddeautomobil',
+	'database' => 'railway',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
