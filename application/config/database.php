@@ -74,23 +74,23 @@ $active_group = 'default';
 $query_builder = TRUE;
 
 $db['default'] = array(
-	'dsn'	=> "",
-	'hostname' => 'monorail.proxy.rlwy.net',
-	'username' => 'root',
-	'password' => 'GSgBzqxTwejWQjLFdlFGdQWycjqSLwOA',
-	'database' => 'mysql://root:GSgBzqxTwejWQjLFdlFGdQWycjqSLwOA@monorail.proxy.rlwy.net:34103/db_zaddeautomobil',
-	'dbdriver' => 'mysqli',
-	'dbprefix' => '',
-	'pconnect' => FALSE,
-	'db_debug' => (ENVIRONMENT !== 'production'),
-	'cache_on' => FALSE,
-	'cachedir' => '',
-	'char_set' => 'utf8',
-	'dbcollat' => 'utf8_general_ci',
-	'swap_pre' => '',
-	'encrypt' => FALSE,
-	'compress' => FALSE,
-	'stricton' => FALSE,
-	'failover' => array(),
-	'save_queries' => TRUE
+    'dsn'   => '',
+    'hostname' => 'monorail.proxy.rlwy.net:34103',  // Include the port number here
+    'username' => 'root',
+    'password' => 'GSgBzqxTwejWQjLFdlFGdQWycjqSLwOA',
+    'database' => 'db_zaddeautomobil',  // Only the database name
+    'dbdriver' => 'mysqli',
+    'dbprefix' => '',
+    'pconnect' => FALSE,
+    'db_debug' => (ENVIRONMENT !== 'production'),
+    'cache_on' => FALSE,
+    'cachedir' => '',
+    'char_set' => 'utf8',
+    'dbcollat' => 'utf8_general_ci',
+    'swap_pre' => '',
+    'encrypt' => FALSE,
+    'compress' => FALSE,
+    'stricton' => FALSE,
+    'failover' => array(),
+    'save_queries' => TRUE
 );
