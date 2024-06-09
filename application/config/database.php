@@ -74,7 +74,7 @@ $active_group = 'default';
 $query_builder = TRUE;
 
 $db['default'] = array(
-	'dsn'	=> 'mysql://root:GSgBzqxTwejWQjLFdlFGdQWycjqSLwOA@monorail.proxy.rlwy.net:34103/db_zaddeautomobil',
+	// 'dsn'	=> 'mysql://root:GSgBzqxTwejWQjLFdlFGdQWycjqSLwOA@monorail.proxy.rlwy.net:34103/db_zaddeautomobil',
 	'hostname' => 'monorail.proxy.rlwy.net',
 	'username' => 'root',
 	'password' => 'GSgBzqxTwejWQjLFdlFGdQWycjqSLwOA',
