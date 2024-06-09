@@ -75,7 +75,7 @@ $query_builder = TRUE;
 
 $db['default'] = array(
     'dsn'   => '',
-    'hostname' => 'monorail.proxy.rlwy.net:34103',  // Include the port number here
+    'hostname' => 'mysql://root:GSgBzqxTwejWQjLFdlFGdQWycjqSLwOA@monorail.proxy.rlwy.net:34103/db_zaddeautomobil',  // Include the port number here
     'username' => 'root',
     'password' => 'GSgBzqxTwejWQjLFdlFGdQWycjqSLwOA',
     'database' => 'db_zaddeautomobil',  // Only the database name
