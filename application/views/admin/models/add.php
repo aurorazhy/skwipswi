@@ -20,10 +20,10 @@
 														<form method="POST" enctype="multipart/form-data">
 															<table class="table">
 																<tr>
-																	<td width=20%>Pilih Brand</td>
+																	<td width=20%>Pilih Merk</td>
 																	<td>
 																		<select name="brand_id" class="form-control" required>
-																			<option value="" disabled selected>Pilih Brand</option>
+																			<option value="" disabled selected>Pilih Merk</option>
 																			<?php foreach ($brands as $brand) : ?>
 																				<option value="<?= $brand->id ?>"><?= $brand->name ?></option>
 																			<?php endforeach; ?>

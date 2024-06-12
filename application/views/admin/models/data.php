@@ -10,7 +10,7 @@
 					<thead>
 						<tr class="text-center">
 							<th style="width: 50px;">No</th>
-							<th>Nama Brand</th>
+							<th>Nama Merk</th>
 							<!-- <th>Kode</th> -->
 							<th>Nama Model</th>
 							<th style="width: 50px;">Aksi</th>

@@ -20,8 +20,8 @@
 														<form method="POST" enctype="multipart/form-data">
 															<table class="table">
 																<tr>
-																	<td width=20%>Nama Brand</td>
-																	<td><input type="text" name="name" class="form-control" required placeholder="Nama Brand"></td>
+																	<td width=20%>Nama Merk</td>
+																	<td><input type="text" name="name" class="form-control" required placeholder="Nama Merk"></td>
 																</tr>
 															</table>
 															<div class="text-center mt-5">
