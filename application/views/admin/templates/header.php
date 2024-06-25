@@ -97,7 +97,7 @@
 						</a>
 						<div class="collapse" id="merk">
 							<ul class="nav flex-column sub-menu">
-								<li class="nav-item"> <a class="nav-link" href="<?= base_url('admin/brands') ?>">Merk</a></li>
+								<li class="nav-item"> <a class="nav-link" href="<?= base_url('admin/brands') ?>">Brand</a></li>
 								<li class="nav-item"> <a class="nav-link" href="<?= base_url('admin/models') ?>">Model</a></li>
 								<li class="nav-item"> <a class="nav-link" href="<?= base_url('admin/cars') ?>">Mobil</a></li>
 							</ul>

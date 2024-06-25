@@ -1,7 +1,7 @@
 <div class="container-fluid">
 	<div class="card shadow mb-4">
 		<div class="card-header py-3 d-flex justify-content-between align-items-center">
-			<h6 class="m-0 font-weight-bold ">Data Merk</h6>
+			<h6 class="m-0 font-weight-bold ">Data Brand</h6>
 			<a href="<?= base_url('admin/brands/add') ?>" class="btn btn-primary"><i class="fa fa-plus fs-5" aria-hidden="true"></i></a>
 		</div>
 		<div class="card-body">

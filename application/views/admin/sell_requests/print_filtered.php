@@ -45,7 +45,7 @@
 							<th>Nama</th>
 							<th>Email</th>
 							<th>No HP</th>
-							<th>Merk</th>
+							<th>Brand</th>
 							<th>Model</th>
 							<th>Tahun</th>
 							<th>Tanggal Permintaan</th>

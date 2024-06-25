@@ -11,7 +11,7 @@
 										<!-- Page Heading -->
 										<div class="card">
 											<div class="card-header">
-												Merk
+											Brand
 											</div>
 											<div class="card-body">
 												<div class="row">

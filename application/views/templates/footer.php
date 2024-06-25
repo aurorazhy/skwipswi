@@ -134,9 +134,9 @@ $models = $this->db->get('models')->result();
 						<input type="text" class="form-control" id="phone" name="phone" required />
 					</div>
 					<div class="mb-3">
-						<label for="brand_id" class="form-label">Merk</label>
+						<label for="brand_id" class="form-label">Brand</label>
 						<select class="form-select" id="brand_id" name="brand_id" required>
-							<option value="" disabled selected>Pilih Merk</option>
+							<option value="" disabled selected>Pilih Brand</option>
 							<?php foreach (($brands ?? []) as $brand) : ?>
 								<option value="<?= $brand->id ?>"><?= $brand->name ?></option>
 							<?php endforeach; ?>
