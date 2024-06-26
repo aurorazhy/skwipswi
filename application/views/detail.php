@@ -25,7 +25,7 @@
 						<p class="card-title fw-bold text-danger">
 							Rp. <?= number_format($car->price, 0, ',', '.') ?>
 						</p>
-						<h4><b><?= $car->brand_name . ' ' . $car->model_name ?></b></h4>
+						<h4><b><?= $car->brand_name . ' ' . $car->series_name ?></b></h4>
 						<table class="table table-borderless">
 							<tbody>
 								<tr>

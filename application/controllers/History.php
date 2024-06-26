@@ -5,28 +5,28 @@ class History extends CI_Controller
 {
 	public function index()
 	{
-		$this->db->select('appointments.*, models.brand_id, cars.model_id, brands.name as brand_name, models.name as model_name');
+		$this->db->select('appointments.*, series.brand_id, cars.series_id, brands.name as brand_name, series.name as model_name');
 		$this->db->from('appointments');
-		$this->db->join('cars', 'cars.id = appointments.car_id');
-		$this->db->join('models', 'models.id = cars.model_id');
-		$this->db->join('brands', 'brands.id = models.brand_id');
+		$this->db->join('cars', 'cars.bpkb_number = appointments.car_id');
+		$this->db->join('series', 'series.id = cars.series_id');
+		$this->db->join('brands', 'brands.id = series.brand_id');
 		$this->db->order_by('appointments.id', 'desc');
 		$this->db->where('appointments.user_id', $this->session->userdata('user')->id);
 		$data['appointments'] = $this->db->get()->result();
 
-		$this->db->select('sale_histories.*, models.brand_id, cars.model_id, brands.name as brand_name, models.name as model_name');
+		$this->db->select('sale_histories.*, series.brand_id, cars.series_id, brands.name as brand_name, series.name as model_name');
 		$this->db->from('sale_histories');
-		$this->db->join('cars', 'cars.id = sale_histories.car_id');
-		$this->db->join('models', 'models.id = cars.model_id');
-		$this->db->join('brands', 'brands.id = models.brand_id');
+		$this->db->join('cars', 'cars.bpkb_number = sale_histories.car_id');
+		$this->db->join('series', 'series.id = cars.series_id');
+		$this->db->join('brands', 'brands.id = series.brand_id');
 		$this->db->order_by('sale_histories.id', 'desc');
 		$this->db->where('sale_histories.user_id', $this->session->userdata('user')->id);
 		$data['sale_histories'] = $this->db->get()->result();
 
-		$this->db->select('sell_requests.*, models.brand_id as brand_id, models.name as model_name, users.name as user_name, users.email as user_email');
+		$this->db->select('sell_requests.*, series.brand_id as brand_id, series.name as model_name, users.name as user_name, users.email as user_email');
 		$this->db->from('sell_requests');
-		$this->db->join('models', 'models.id = sell_requests.model_id');
-		$this->db->join('brands', 'brands.id = models.brand_id');
+		$this->db->join('series', 'series.id = sell_requests.series_id');
+		$this->db->join('brands', 'brands.id = series.brand_id');
 		$this->db->join('users', 'users.id = sell_requests.user_id');
 		$this->db->order_by('sell_requests.id', 'desc');
 		$this->db->where('sell_requests.user_id', $this->session->userdata('user')->id);
@@ -36,7 +36,7 @@ class History extends CI_Controller
 			$CI =& get_instance();
 			$CI->db->select('brand_id');
 			$CI->db->where('id', $model_id);
-			$query = $CI->db->get('models');
+			$query = $CI->db->get('series');
 			$model = $query->row();
 		
 			$brand = $CI->db->get_where('brands', ['id' => $model->brand_id])->row();

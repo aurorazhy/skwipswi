@@ -41,17 +41,17 @@ class Dashboard extends CI_Controller
 		$this->db->from('users');
 		$data['users'] = $this->db->get()->result();
 
-		$this->db->select('cars.*, models.brand_id as brand_id, models.name as model_name, brands.name as brand_name');
+		$this->db->select('cars.*, series.brand_id as brand_id, series.name as series_name, brands.name as brand_name');
 		$this->db->from('cars');
-		$this->db->join('models', 'models.id = cars.model_id');
-		$this->db->join('brands', 'brands.id = models.brand_id');
+		$this->db->join('series', 'series.id = cars.series_id');
+		$this->db->join('brands', 'brands.id = series.brand_id');
 		$this->db->where('cars.is_sold', 0);
 		$data['katalog_aktif'] = $this->db->get()->result();
 
-		$this->db->select('cars.*, models.brand_id as brand_id, models.name as model_name, brands.name as brand_name');
+		$this->db->select('cars.*, series.brand_id as brand_id, series.name as series_name, brands.name as brand_name');
 		$this->db->from('cars');
-		$this->db->join('models', 'models.id = cars.model_id');
-		$this->db->join('brands', 'brands.id = models.brand_id');
+		$this->db->join('series', 'series.id = cars.series_id');
+		$this->db->join('brands', 'brands.id = series.brand_id');
 		$data['katalog'] = $this->db->get()->result();
 
 		$this->db->select('*');
@@ -61,12 +61,12 @@ class Dashboard extends CI_Controller
 		$this->db->where('status', 'SUCCESS');
 		$data['penjualan_perbulan'] = $this->db->get()->result();
 
-		$this->db->select('sale_histories.*, users.name as user_name, users.email as email, payment_options.name as payment_option_name, cars.name as car_name, cars.price as car_price, cars.number_plate as car_number_plate, cars.color as car_color, cars.year as car_year, cars.kilometers as car_kilometers, cars.cc_engine as car_cc_engine, cars.transmission as car_transmission, cars.fuel as car_fuel, cars.tax_exp_date as car_tax_exp_date, cars.registration_area as car_registration_area, cars.description as car_description, cars.img_link as car_image, cars.is_sold as car_is_sold, models.brand_id as brand_id, models.name as model_name, brands.name as brand_name');
+		$this->db->select('sale_histories.*, users.name as user_name, users.email as email, payment_options.name as payment_option_name, cars.series_id as car_name, cars.price as car_price, cars.number_plate as car_number_plate, cars.color as car_color, cars.year as car_year, cars.kilometers as car_kilometers, cars.cc_engine as car_cc_engine, cars.transmission as car_transmission, cars.fuel as car_fuel, cars.tax_exp_date as car_tax_exp_date, cars.registration_area as car_registration_area, cars.description as car_description, cars.img_link as car_image, cars.is_sold as car_is_sold, series.brand_id as brand_id, series.name as series_name, brands.name as brand_name');
 		$this->db->from('sale_histories');
 		$this->db->join('payment_options', 'payment_options.id = sale_histories.payment_id');
-		$this->db->join('cars', 'cars.id = sale_histories.car_id');
-		$this->db->join('models', 'models.id = cars.model_id');
-		$this->db->join('brands', 'brands.id = models.brand_id');
+		$this->db->join('cars', 'cars.bpkb_number = sale_histories.car_id');
+		$this->db->join('series', 'series.id = cars.series_id');
+		$this->db->join('brands', 'brands.id = series.brand_id');
 		$this->db->join('users', 'users.id = sale_histories.user_id');
 		$this->db->order_by('id', 'DESC');
 		$this->db->limit(5);

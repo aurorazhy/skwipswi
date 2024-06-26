@@ -51,7 +51,7 @@
 								<td><?= $x->user_email; ?></td>
 								<td><?= $x->phone; ?></td>
 								<td><?= $x->brand_name; ?></td>
-								<td><?= $x->model_name; ?></td>
+								<td><?= $x->series_name; ?></td>
 								<td><?= $x->prod_year; ?></td>
 								<td><?= $x->sell_date; ?></td>
 								<td>

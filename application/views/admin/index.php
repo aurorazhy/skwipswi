@@ -73,7 +73,7 @@
 													<td><?= $x->user_name; ?></td>
 													<td><?= $x->email; ?></td>
 													<td><?= $x->phone; ?></td>
-													<td><?= $x->car_name; ?></td>
+													<td><?= $x->brand_name; ?> || <?= $x->series_name; ?></td>
 													<td><?= $x->buy_date; ?></td>
 													<td>
 														<?php if ($x->status == 'SUCCESS') { ?>

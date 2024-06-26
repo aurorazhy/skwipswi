@@ -1,7 +1,7 @@
 <?php
 $payment_options = $this->db->get('payment_options')->result();
 $brands = $this->db->get('brands')->result();
-$models = $this->db->get('models')->result();
+$models = $this->db->get('series')->result();
 ?>
 <div class="container my-5">
 	<!-- Footer -->
@@ -78,7 +78,7 @@ $models = $this->db->get('models')->result();
 						<label for="date" class="form-label">Tanggal & Jam</label>
 						<input type="datetime-local" class="form-control" id="date" name="date" required />
 					</div>
-					<input type="hidden" name="car_id" value="<?= @$car->id ?>" />
+					<input type="hidden" name="car_bpkb_number" value="<?= @$car->bpkb_number ?>" />
 					<div class="text-center">
 						<button type="submit" class="btn btn-primary">Buat Janji Temu</button>
 					</div>

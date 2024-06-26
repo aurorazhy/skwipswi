@@ -6,10 +6,10 @@ class Cars extends CI_Controller
 
 	public function index()
 	{
-		$this->db->select('cars.*, models.brand_id as brand_id, models.name as model_name, brands.name as brand_name');
+		$this->db->select('cars.*, series.brand_id as brand_id, series.name as series_name, brands.name as brand_name');
 		$this->db->from('cars');
-		$this->db->join('models', 'models.id = cars.model_id');
-		$this->db->join('brands', 'brands.id = models.brand_id');
+		$this->db->join('series', 'series.id = cars.series_id');
+		$this->db->join('brands', 'brands.id = series.brand_id');
 		$this->db->where('cars.is_sold', '0');
 		$data['cars'] = $this->db->get()->result();
 		$this->load->view('templates/header');
@@ -19,11 +19,11 @@ class Cars extends CI_Controller
 
 	public function detail($id)
 	{
-		$this->db->select('cars.*, models.brand_id as brand_id, models.name as model_name, brands.name as brand_name');
+		$this->db->select('cars.*, series.brand_id as brand_id, series.name as series_name, brands.name as brand_name');
 		$this->db->from('cars');
-		$this->db->join('models', 'models.id = cars.model_id');
-		$this->db->join('brands', 'brands.id = models.brand_id');
-		$this->db->where('cars.id', $id);
+		$this->db->join('series', 'series.id = cars.series_id');
+		$this->db->join('brands', 'brands.id = series.brand_id');
+		$this->db->where('cars.bpkb_number', $id);
 		$data['car'] = $this->db->get()->row();
 		$data['payment_options'] = $this->db->get('payment_options')->result();
 		$this->load->view('templates/header');
@@ -37,12 +37,12 @@ class Cars extends CI_Controller
 			'phone' => $this->input->post('phone'),
 			'meet_date' => date('Y-m-d', strtotime($this->input->post('date'))),
 			'meet_time' => date('H:i:s', strtotime($this->input->post('date'))),
-			'car_id' => $this->input->post('car_id'),
+			'car_bpkb_number' => $this->input->post('car_bpkb_number'),
 			'user_id' => $this->session->userdata('user')->id,
 		];
 		$this->db->insert('appointments', $data);
 		$this->session->set_flashdata('success', 'Berhasil membuat janji temu, silahkan tunggu konfirmasi dari kami!');
-		redirect('cars/detail/' . $this->input->post('car_id'));
+		redirect('cars/detail/' . $this->input->post('car_bpkb_number'));
 	}
 
 	public function submit_buy_car()
@@ -69,7 +69,7 @@ class Cars extends CI_Controller
 		$data = [
 			'phone' => $this->input->post('phone'),
 			'brand_id' => $this->input->post('brand_id'),
-			'model_id' => $this->input->post('model_id'),
+			'series_id' => $this->input->post('series_id'),
 			'user_id' => $this->session->userdata('user')->id,
 			'prod_year' => substr($this->input->post('prod_year'), 0, 4),
 		];

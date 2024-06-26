@@ -11,10 +11,10 @@ class Cars extends CI_Controller
 
 	public function index()
 	{
-		$this->db->select('cars.*, models.brand_id as brand_id, models.name as model_name, brands.name as brand_name');
+		$this->db->select('cars.*, series.brand_id as brand_id, series.name as series_name, brands.name as brand_name');
 		$this->db->from('cars');
-		$this->db->join('models', 'models.id = cars.model_id');
-		$this->db->join('brands', 'brands.id = models.brand_id');
+		$this->db->join('series', 'series.id = cars.seires_id');
+		$this->db->join('brands', 'brands.id = series.brand_id');
 		$this->db->join('admins', 'admins.id = cars.admin_id');
 		$data['data'] = $this->db->get()->result();
 		$this->load->view('admin/templates/header');
