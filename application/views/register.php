@@ -7,35 +7,35 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title><?= APP_NAME ?> Register</title>
 	<link rel="stylesheet" href="<?= assets('vendors/bootstrap/css/bootstrap.min.css') ?>">
+	<link href="<?php echo base_url('assets/css/login.css'); ?>" rel="stylesheet">
+	<link href="<?= assets('vendors/fontawesome/css/all.min.css') ?>" rel="stylesheet" />
 </head>
 
 <body>
 	<div class="container">
 		<div class="row justify-content-center mt-5">
 			<div class="col-md-4">
-				<div class="card">
-					<div class="card-header">
-						<h3 class="text-center">Register</h3>
+				<div class="text-center mb-4">
+					<i class="fas fa-user-circle fa-6x"></i>
+					<br>
+					<h1 class="h3 mb-3 font-weight-normal">Register</h1>
 					</div>
-					<div class="card-body">
 						<form method="post">
 							<div class="mb-3 form-group">
-								<label for="name">Name</label>
-								<input type="text" class="form-control" name="name" id="name" required>
+								<input type="text" class="form-control" name="name" id="name" placeholder="Name" required autofocus>
 							</div>
 							<div class="mb-3 form-group">
-								<label for="email">Email</label>
-								<input type="email" class="form-control" name="email" id="email" required>
+								<input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
 							</div>
 							<div class="mb-3 form-group">
-								<label for="password">Password</label>
-								<input type="password" class="form-control" name="password" id="password" required>
+								<input type="password" class="form-control" name="password" id="password" placeholder="Password" required>
 							</div>
 							<div class="text-center">
 								<button type="submit" name="register" class="btn btn-primary btn-block">Register</button>
 							</div>
 							<div class="text-center mt-3">
-								<a href="<?= base_url('auth/login') ?>">Kembali ke Login</a>
+								<a class="link" href="<?= base_url('auth/login') ?>">Login</a>
+								<p class="mt-3 mb-3 text-muted text-center">&copy; Zadde Auto Mobil <?php echo date("Y"); ?></p>
 							</div>
 						</form>
 					</div>
