@@ -20,8 +20,8 @@
 														<form method="POST" enctype="multipart/form-data">
 															<table class="table">
 																<tr>
-																	<td width=20%>Nama Mobil</td>
-																	<td><input type="text" name="name" class="form-control" required placeholder="Nama Mobil" value="<?= $data->name ?>"></td>
+																	<td width=20%>Nomor BPKB</td>
+																	<td><input type="text" name="name" class="form-control" required placeholder="Nomor BPKB" value="<?= $data->name ?>"></td>
 																</tr>
 																<!-- <tr>
 																	<td width=20%>Merk</td>

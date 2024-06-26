@@ -11,7 +11,7 @@
 						<tr class="text-center">
 							<th style="width: 50px;">No</th>
 							<th>Gambar</th>
-							<th>Catatan</th>
+							<th>Nomor BPKB</th>
 							<th>Brand</th>
 							<th>Model</th>
 							<th>Plat</th>

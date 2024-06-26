@@ -20,8 +20,8 @@
 														<form method="POST" enctype="multipart/form-data">
 															<table class="table">
 																<tr>
-																	<td width=20%>Catatan Tambahan</td>
-																	<td><input type="text" name="name" class="form-control" required placeholder="Catatan"></td>
+																	<td width=20%>Nomor BPKB</td>
+																	<td><input type="text" name="name" class="form-control" required placeholder="Nomor BPKB"></td>
 																</tr>
 																<!-- <tr>
 																	<td width=20%>Merk</td>
