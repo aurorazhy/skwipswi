@@ -74,11 +74,11 @@ $active_group = 'default';
 $query_builder = TRUE;
 
 $db['default'] = array(
-	'dsn'	   => 'mysql://root:GSgBzqxTwejWQjLFdlFGdQWycjqSLwOA@monorail.proxy.rlwy.net:34103/railway',
+	'dsn'	   => 'mysql://root:sWxeDPXlxodWCIMhRfgYOgtASTJdsMVw@monorail.proxy.rlwy.net:46045/railway',
 	'hostname' => 'monorail.proxy.rlwy.net',
-	'port'     => '34103',
+	'port'     => '46045',
 	'username' => 'root',
-	'password' => 'GSgBzqxTwejWQjLFdlFGdQWycjqSLwOA',
+	'password' => 'sWxeDPXlxodWCIMhRfgYOgtASTJdsMVw',
 	'database' => 'railway',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',

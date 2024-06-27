@@ -10,13 +10,20 @@ body {
   align-items: center;
   padding-top: 40px;
   padding-bottom: 40px;
-  background-color: #f5f5f5;
+  background: rgb(229,245,255);
+background: linear-gradient(162deg, rgba(229,245,255,1) 0%, rgba(120,147,249,1) 21%, rgba(146,60,240,1) 50%, rgba(167,185,250,1) 80%, rgba(255,255,255,1) 100%);
 }
 
 .link{
     text-decoration: none; 
-    color: black;
-    font-weight: bold;
+    color: rgb(255, 255, 255);
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-size: larger;
+}
+
+.cp{
+  color: rgb(223, 223, 223);
 }
 
 .form-signin {

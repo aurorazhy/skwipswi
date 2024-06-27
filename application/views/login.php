@@ -15,10 +15,9 @@
 	<div class="container">
 		<div class="row justify-content-center mt-5">
 			<div class="col-md-4">
-				<div class="text-center mb-4">
-					<i class="fas fa-car fa-6x"></i>
-					<br>
-					<h1 class="h3 mb-3 font-weight-normal">Login</h1>
+				<div class="text-center mb-4" style="color: white;">
+					<i class="fas fa-car fa-6x "></i>
+					<h1 class="h3 mb-3 mt-2 font-weight-normal text-white">Login</h1>
 				</div>
 				<form method="post">
 					<div class="form-group mb-3">
@@ -32,7 +31,7 @@
 					</div>
 					<div class="text-center mt-3">
 						<a class="link" href="<?= base_url('auth/register') ?>">Register</a>
-						<p class="mt-3 mb-3 text-muted text-center">&copy; Zadde Auto Mobil <?php echo date("Y"); ?></p>
+						<p class="mt-3 cp mb-3 text-center">&copy; Zadde Auto Mobil <?php echo date("Y"); ?></p>
 					</div>
 				</form>
 			</div>
