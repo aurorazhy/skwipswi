@@ -11,7 +11,7 @@
 										<!-- Page Heading -->
 										<div class="card">
 											<div class="card-header">
-												Model
+											Seri
 											</div>
 											<div class="card-body">
 												<div class="row">
@@ -35,7 +35,7 @@
 																	<td><input type="text" name="code" class="form-control" required placeholder="Kode" value="<?= $data->code; ?>"></td>
 																</tr> -->
 																<tr>
-																	<td width=20%>Nama Model</td>
+																	<td width=20%>Nama Seri</td>
 																	<td><input type="text" name="name" class="form-control" required placeholder="Nama Model" value="<?= $data->name; ?>"></td>
 																</tr>
 															</table>

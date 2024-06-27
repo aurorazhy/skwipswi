@@ -23,7 +23,7 @@
 							<th>Email</th>
 							<th>No HP</th>
 							<th>Brand</th>
-							<th>Model</th>
+							<th>Seri</th>
 							<th>Tahun</th>
 							<th>Status</th>
 							<th style="width: 50px;">Aksi</th>

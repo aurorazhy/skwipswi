@@ -13,7 +13,7 @@
 							<th>Gambar</th>
 							<th>Nomor BPKB</th>
 							<th>Brand</th>
-							<th>Model</th>
+							<th>Seri</th>
 							<th>Plat</th>
 							<th>Transmisi</th>
 							<th>Fuel</th>
@@ -34,8 +34,8 @@
 						foreach ($data as $x) { ?>
 							<tr class="text-center">
 								<td><?= $nomor++; ?></td>
-								<td><img src="<?= assets('img/cars/') . $x->img_link; ?>" alt="<?= $x->name; ?>" class="img-fluid rounded-0 my-2"></td>
-								<td><?= $x->name; ?></td>
+								<td><img src="<?= assets('img/cars/') . $x->img_link; ?>" alt="<?= $x->bpkb_number; ?>" class="img-fluid rounded-0 my-2"></td>
+								<td><?= $x->bpkb_number; ?></td>
 								<td><?= $x->brand_name; ?></td>
 								<td><?= $x->model_name; ?></td>
 								<td><?= $x->number_plate; ?></td>

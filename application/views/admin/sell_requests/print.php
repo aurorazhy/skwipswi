@@ -35,7 +35,7 @@
 							<th>Email</th>
 							<th>No HP</th>
 							<th>Brand</th>
-							<th>Model</th>
+							<th>Seri</th>
 							<th>Tahun</th>
 							<th>Tanggal Permintaan</th>
 							<th>Status</th>

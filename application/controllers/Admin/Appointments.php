@@ -11,7 +11,7 @@ class Appointments extends CI_Controller
 
 	public function index()
 	{
-		$this->db->select('appointments.*, CONCAT(brands.name, " ", models.name, " | ", cars.name) as car_name, admins.name as admin_name, users.name as user_name, users.email as user_email');
+		$this->db->select('appointments.*, CONCAT(brands.name, " | ", models.name) as car_name, admins.name as admin_name, users.name as user_name, users.email as user_email');
 		$this->db->from('appointments');
 		$this->db->join('cars', 'cars.id = appointments.car_id');
 		$this->db->join('models', 'models.id = cars.model_id');

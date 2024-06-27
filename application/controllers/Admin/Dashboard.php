@@ -36,47 +36,65 @@ class Dashboard extends CI_Controller
 	public function index()
 	{
 		if (!$this->admin) return false;
-		// users
-		$this->db->select('*');
-		$this->db->from('users');
-		$data['users'] = $this->db->get()->result();
 
-		$this->db->select('cars.*, models.brand_id as brand_id, models.name as model_name, brands.name as brand_name');
-		$this->db->from('cars');
-		$this->db->join('models', 'models.id = cars.model_id');
-		$this->db->join('brands', 'brands.id = models.brand_id');
-		$this->db->where('cars.is_sold', 0);
-		$data['katalog_aktif'] = $this->db->get()->result();
+    // Get users
+    $data['users'] = $this->db->get('users')->result();
 
-		$this->db->select('cars.*, models.brand_id as brand_id, models.name as model_name, brands.name as brand_name');
-		$this->db->from('cars');
-		$this->db->join('models', 'models.id = cars.model_id');
-		$this->db->join('brands', 'brands.id = models.brand_id');
-		$data['katalog'] = $this->db->get()->result();
+    // Get active catalog
+    $this->db->select('cars.*, models.brand_id as brand_id, models.name as model_name, brands.name as brand_name');
+    $this->db->from('cars');
+    $this->db->join('models', 'models.id = cars.model_id');
+    $this->db->join('brands', 'brands.id = models.brand_id');
+    $this->db->where('cars.is_sold', 0);
+    $query = $this->db->get();
+    if (!$query) {
+        show_error('Error fetching active catalog: ' . $this->db->error()['message'], 500);
+    }
+    $data['katalog_aktif'] = $query->result();
 
-		$this->db->select('*');
-		$this->db->from('sale_histories');
-		$this->db->where('MONTH(buy_date)', date('m'));
-		$this->db->where('YEAR(buy_date)', date('Y'));
-		$this->db->where('status', 'SUCCESS');
-		$data['penjualan_perbulan'] = $this->db->get()->result();
+    // Get complete catalog
+    $this->db->select('cars.*, models.brand_id as brand_id, models.name as model_name, brands.name as brand_name');
+    $this->db->from('cars');
+    $this->db->join('models', 'models.id = cars.model_id');
+    $this->db->join('brands', 'brands.id = models.brand_id');
+    $query = $this->db->get();
+    if (!$query) {
+        show_error('Error fetching catalog: ' . $this->db->error()['message'], 500);
+    }
+    $data['katalog'] = $query->result();
 
-		$this->db->select('sale_histories.*, users.name as user_name, users.email as email, payment_options.name as payment_option_name, cars.name as car_name, cars.price as car_price, cars.number_plate as car_number_plate, cars.color as car_color, cars.year as car_year, cars.kilometers as car_kilometers, cars.cc_engine as car_cc_engine, cars.transmission as car_transmission, cars.fuel as car_fuel, cars.tax_exp_date as car_tax_exp_date, cars.registration_area as car_registration_area, cars.description as car_description, cars.img_link as car_image, cars.is_sold as car_is_sold, models.brand_id as brand_id, models.name as model_name, brands.name as brand_name');
-		$this->db->from('sale_histories');
-		$this->db->join('payment_options', 'payment_options.id = sale_histories.payment_id');
-		$this->db->join('cars', 'cars.id = sale_histories.car_id');
-		$this->db->join('models', 'models.id = cars.model_id');
-		$this->db->join('brands', 'brands.id = models.brand_id');
-		$this->db->join('users', 'users.id = sale_histories.user_id');
-		$this->db->order_by('id', 'DESC');
-		$this->db->limit(5);
-		$data['penjualan_terakhir'] = $this->db->get()->result();
+    // Get sales per month
+    $this->db->select('*');
+    $this->db->from('sale_histories');
+    $this->db->where('MONTH(buy_date)', date('m'));
+    $this->db->where('YEAR(buy_date)', date('Y'));
+    $this->db->where('status', 'SUCCESS');
+    $query = $this->db->get();
+    if (!$query) {
+        show_error('Error fetching monthly sales: ' . $this->db->error()['message'], 500);
+    }
+    $data['penjualan_perbulan'] = $query->result();
 
-		$this->load->view('admin/templates/header');
-		$this->load->view('admin/index', $data);
-		$this->load->view('admin/templates/footer');
-	}
+    // Get latest sales
+    $this->db->select('sale_histories.*, users.name as user_name, users.email as email, payment_options.name as payment_option_name, models.name as car_name, cars.price as car_price, cars.number_plate as car_number_plate, cars.color as car_color, cars.year as car_year, cars.kilometers as car_kilometers, cars.cc_engine as car_cc_engine, cars.transmission as car_transmission, cars.fuel as car_fuel, cars.tax_exp_date as car_tax_exp_date, cars.registration_area as car_registration_area, cars.description as car_description, cars.img_link as car_image, cars.is_sold as car_is_sold, models.brand_id as brand_id, models.name as model_name, brands.name as brand_name');
+    $this->db->from('sale_histories');
+    $this->db->join('payment_options', 'payment_options.id = sale_histories.payment_id');
+    $this->db->join('cars', 'cars.id = sale_histories.car_id');
+    $this->db->join('models', 'models.id = cars.model_id');
+    $this->db->join('brands', 'brands.id = models.brand_id');
+    $this->db->join('users', 'users.id = sale_histories.user_id');
+    $this->db->order_by('id', 'DESC');
+    $this->db->limit(5);
+    $query = $this->db->get();
+    if (!$query) {
+        show_error('Error fetching latest sales: ' . $this->db->error()['message'], 500);
+    }
+    $data['penjualan_terakhir'] = $query->result();
 
+    $this->load->view('admin/templates/header');
+    $this->load->view('admin/index', $data);
+    $this->load->view('admin/templates/footer');
+}
 	public function profile()
 	{
 		if (!$this->admin) return false;

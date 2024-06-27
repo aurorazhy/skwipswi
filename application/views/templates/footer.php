@@ -143,9 +143,9 @@ $models = $this->db->get('models')->result();
 						</select>
 					</div>
 					<div class="mb-3">
-						<label for="model_id" class="form-label">Model</label>
+						<label for="model_id" class="form-label">Seri</label>
 						<select class="form-select" id="model_id" name="model_id" required>
-							<option value="" disabled selected>Pilih Model</option>
+							<option value="" disabled selected>Pilih Seri</option>
 							<?php foreach (($models ?? []) as $model) : ?>
 								<option value="<?= $model->id ?>"><?= $model->name ?></option>
 							<?php endforeach; ?>

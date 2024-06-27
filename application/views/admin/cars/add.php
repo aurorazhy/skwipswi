@@ -35,10 +35,10 @@
 																	</td>
 																</tr> -->
 																<tr>
-																	<td width=20%>Model</td>
+																	<td width=20%>Seri</td>
 																	<td>
 																		<select name="model_id" class="form-control" required>
-																			<option value="" disabled selected>Pilih Model</option>
+																			<option value="" disabled selected>Pilih Seri</option>
 																			<?php foreach ($models as $model) : ?>
 																				<option value="<?= $model->id ?>"><?= $model->name ?></option>
 																			<?php endforeach; ?>

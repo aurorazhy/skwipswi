@@ -1,7 +1,7 @@
 <div class="container-fluid">
 	<div class="card shadow mb-4">
 		<div class="card-header py-3 d-flex justify-content-between align-items-center">
-			<h6 class="m-0 font-weight-bold ">Data Model</h6>
+			<h6 class="m-0 font-weight-bold ">Data Seri</h6>
 			<a href="<?= base_url('admin/models/add') ?>" class="btn btn-primary"><i class="fa fa-plus fs-5" aria-hidden="true"></i></a>
 		</div>
 		<div class="card-body">
@@ -12,7 +12,7 @@
 							<th style="width: 50px;">No</th>
 							<th>Nama Brand</th>
 							<!-- <th>Kode</th> -->
-							<th>Nama Model</th>
+							<th>Nama Seri</th>
 							<th style="width: 50px;">Aksi</th>
 						</tr>
 					</thead>

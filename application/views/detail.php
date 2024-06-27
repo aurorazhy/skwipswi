@@ -105,14 +105,14 @@
 					<div class="card-footer d-flex justify-content-evenly align-items-center">
 						<?php if (!is_logged_in()) : ?>
 							<a class="btn btn-primary" href="<?= base_url('auth/login') ?>">
-								Meet Up
+								Janji Temu
 							</a>
 							<a class="btn btn-success" href="<?= base_url('auth/login') ?>">
 								Beli
 							</a>
 						<?php else : ?>
 							<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#appointmentModal">
-								Meet Up
+								Janji Temu
 							</button>
 							<button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#buyCarModal">
 								Beli

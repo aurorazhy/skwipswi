@@ -21,7 +21,7 @@
 															<table class="table">
 																<tr>
 																	<td width=20%>Nama Brand</td>
-																	<td><input type="text" name="name" class="form-control" required placeholder="Nama Merk" value="<?= $data->name; ?>"></td>
+																	<td><input type="text" name="name" class="form-control" required placeholder="Nama Brand" value="<?= $data->name; ?>"></td>
 																</tr>
 															</table>
 															<div class="text-center mt-5">
